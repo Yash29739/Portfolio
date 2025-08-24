@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
 import { Button } from './ui/Button';
-import { Award, Code, Download, Mail, Menu, User } from 'lucide-react';
+import { Award, Code, Download, Mail, Menu, User, X } from 'lucide-react';
 import { ThemeSelector } from './ThemeSelector';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet';
 
@@ -25,13 +25,13 @@ export function Header  ()  {
     
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-      }, []);
+    }, []);
 
     //   for the direct navigation purpose
-    const scrollToSection = (id: string) => {
-        const element = document.getElementById(id);
+    const scrollToSection = (sectionId: string) => {
+        const element = document.getElementById(sectionId);
         if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+          element?.scrollIntoView({ behavior: "smooth" });
           setisMobileMenuOpen(false);
         }
     };
@@ -55,7 +55,7 @@ export function Header  ()  {
 
     return (
         <motion.header 
-            className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
+            className={`sticky top-0 z-50 w-full border-b transition-all duration-300 relative overflow-hidden ${
                 isScrolled 
                 ? 'bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-lg' 
                 : 'bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'
@@ -65,7 +65,7 @@ export function Header  ()  {
             transition={{ duration: 0.6, ease: "easeOut" }}
         >
 
-        <div className="container  mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container  mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div className="flex h-14 items-center justify-between">
                 <motion.div className="flex items-center space-x-4" 
                     whileHover={{ scale: 1.05 }}
@@ -127,14 +127,15 @@ export function Header  ()  {
                         <Download className="w-4 h-4 mr-1"/>
                         Resume
                     </Button>
-
                     </motion.div>
+                    
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        className="hidden md:block"
                     >
                     <Button onClick={() => scrollToSection('contact')} size="sm">
                         Get In Touch
@@ -155,7 +156,6 @@ export function Header  ()  {
                         </SheetTrigger>
 
                         <SheetContent side='right' className='w-80'>
-                            <SheetHeader>
                                 <SheetHeader>
                                     <SheetTitle className='text-left text-2xl font-bold'>
                                         Navigation Menu
@@ -194,7 +194,7 @@ export function Header  ()  {
 
                                     <div className="pt-6 border-t space-y-3">
                                         <motion.div 
-                                            initial={{opacity: 1, y: 20}}
+                                            initial={{opacity: 0, y: 20}}
                                             animate={{ opacity: 1, y: 0 }}
                                             transition={{ duration: 0.3, delay: 0.6 }}
                                         >
@@ -203,7 +203,7 @@ export function Header  ()  {
                                                 className='w-full justify-start'
                                             >
                                                 <Download className='w-4 h-4 mr-2'/>
-                                                Download resume
+                                                Download Resume
                                             </Button>
                                         </motion.div>
 
@@ -226,8 +226,6 @@ export function Header  ()  {
 
 
                                 </div>
-
-                            </SheetHeader>
                         </SheetContent>
                         
                     </Sheet>
