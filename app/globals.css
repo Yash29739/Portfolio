@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 @custom-variant dark (&:is(.dark *));
 @custom-variant blue-light (&:is(.blue-light *));
 @custom-variant blue-dark (&:is(.blue-dark *));
@@ -28,6 +27,16 @@
   --font-weight-medium: 500;
   --font-weight-normal: 400;
   --radius: 0.625rem;
+  
+  /* Text sizes for typography */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
   
   /* Light Theme (Default) */
   --background: #ffffff;

@@ -1,7 +1,12 @@
 'use client'
 import React, { useState } from 'react'
 import { useScrollReveal } from '../hooks/useScrollReveal';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import Image  from 'next/image';
+import { Badge } from '../ui/Badge';
+import { ChevronDown, ChevronUp, ExternalLink, Github, RotateCcw } from 'lucide-react';
+import { Button } from '../ui/Button';
 
 const Projects = () => {
   const [ref,isVisible]=useScrollReveal(0.1);
@@ -11,7 +16,7 @@ const Projects = () => {
     {
       title: "E-Commerce Platform",
       description: "A full-stack e-commerce platform with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1554306274-f23873d9a26c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzU1NTgxOTUwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/img.png",
       technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/example/project1"
@@ -19,7 +24,7 @@ const Projects = () => {
     {
       title: "Task Management App",
       description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1597740985671-2a8a3b80502e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXNpZ258ZW58MXx8fHwxNzU1NjQxMDIxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/img.png",
       technologies: ["React", "TypeScript", "Socket.io", "MongoDB"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/example/project2"
@@ -27,7 +32,7 @@ const Projects = () => {
     {
       title: "Analytics Dashboard",
       description: "A comprehensive analytics dashboard with interactive charts, real-time data visualization, and customizable reporting features.",
-      image: "https://images.unsplash.com/photo-1634807010323-4309f645e5a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXNoYm9hcmQlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzU1Njk4NDc4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/img.png",
       technologies: ["Next.js", "D3.js", "Python", "FastAPI"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/example/project3"
@@ -35,7 +40,7 @@ const Projects = () => {
     {
       title: "Social Media Platform",
       description: "A modern social media application with real-time messaging, post sharing, and social networking features. Built with modern web technologies.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2NpYWwlMjBtZWRpYSUyMGFwcHxlbnwxfHx8fDE3NTU1ODE5NTB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/img.png",
       technologies: ["Vue.js", "Express", "Redis", "WebSocket"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/example/project4"
@@ -43,7 +48,7 @@ const Projects = () => {
     {
       title: "AI-Powered Chat Bot",
       description: "An intelligent chatbot application with natural language processing, context awareness, and integration with various APIs for enhanced user experience.",
-      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhaSUyMGNoYXRib3R8ZW58MXx8fHwxNzU1NTgxOTUwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/img.png",
       technologies: ["Python", "OpenAI", "Flask", "TensorFlow"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/example/project5"
@@ -51,7 +56,7 @@ const Projects = () => {
     {
       title: "Cryptocurrency Tracker",
       description: "A real-time cryptocurrency tracking application with portfolio management, price alerts, and detailed market analytics with beautiful charts.",
-      image: "https://images.unsplash.com/photo-1622630998477-20aa696ecb05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcnlwdG9jdXJyZW5jeSUyMGNoYXJ0fGVufDF8fHx8MTc1NTU4MTk1MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/img.png",
       technologies: ["React", "Chart.js", "Web3", "Node.js"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/example/project6"
@@ -59,7 +64,7 @@ const Projects = () => {
     {
       title: "Weather Forecast App",
       description: "A beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics for multiple cities worldwide.",
-      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWF0aGVyJTIwYXBwfGVufDF8fHx8MTc1NTU4MTk1MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/img.png",
       technologies: ["React Native", "OpenWeather API", "Redux", "Maps"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/example/project7"
@@ -67,7 +72,7 @@ const Projects = () => {
     {
       title: "Recipe Sharing Platform",
       description: "A community-driven recipe sharing platform where users can discover, save, and share their favorite recipes with detailed nutritional information.",
-      image: "https://images.unsplash.com/photo-1556908114-f6e7ad7d3136?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWNpcGUlMjBhcHB8ZW58MXx8fHwxNzU1NTgxOTUwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/img.png",
       technologies: ["Angular", "Firebase", "Ionic", "PWA"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/example/project8"
@@ -75,7 +80,7 @@ const Projects = () => {
     {
       title: "Fitness Tracking Dashboard",
       description: "A comprehensive fitness tracking application with workout plans, progress tracking, and social features for motivation and community building.",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXRuZXNzJTIwYXBwfGVufDF8fHx8MTc1NTU4MTk1MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/img.png",
       technologies: ["React", "GraphQL", "Apollo", "Prisma"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/example/project9"
@@ -85,7 +90,8 @@ const Projects = () => {
   const LOAD_INCRREMENT = 3;
   const INITIAL_COUNT = 3;
   const visibleProjects = projects.slice(0, visibleCount);
-  const hashMoreProjects = visibleCount > INITIAL_COUNT;
+  const hashMoreProjects =  visibleCount < projects.length;
+  const canShowLess = visibleCount > INITIAL_COUNT;
 
   const loadMoreProjects = () =>{
     const newCount = Math.min(visibleCount + LOAD_INCRREMENT,projects.length);
@@ -121,9 +127,246 @@ const Projects = () => {
             Showing {visibleProjects.length} of {projects.length} projects
           </motion.div>
         </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <AnimatePresence mode="popLayout" >
+            {visibleProjects.map((project,index)=>(
+              <motion.div
+              key={`${project.title}-${index}`}
+              layout
+              initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -50, scale: 0.9 }}
+              transition={{ 
+                duration: 0.6, 
+                delay: isVisible ? (index < INITIAL_COUNT ? 0.2 + index * 0.1 : 0.1) : 0,
+                ease: "easeOut",
+                layout: { duration: 0.4 }
+              }}
+              whileHover={{ y: -10 }}
+              >
+                <Card className='group hover:shadow-xl transition-all duration-300 overflow-hidden h-full'>
+                <div className="aspect-video overflow-hidden">
+                  <motion.div
+                    whileHover={{scale:1.1}}
+                    transition={{duration: 0.3}}
+                  >
+                    <Image
+                      width={100}
+                      height={100}
+                      src={project.image}
+                      alt={project.title}
+                      className='w-fulll h-full object-cover'
+                    />
+                  </motion.div>
+                  </div>
+
+                  <CardHeader>
+                    <CardTitle className="text-xl">{project.title}</CardTitle>
+                    <CardDescription className="text-sm">
+                      {project.description}
+                    </CardDescription>
+                  </CardHeader>
+
+                  <CardContent className='space-y-4'>
+                  <div className="flex flex-wrap gap-1">
+                      {project.technologies.map((tech, techIndex) => (
+                        <motion.div
+                          key={techIndex}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                          transition={{ 
+                            duration: 0.4, 
+                            delay: 0.4 + index * 0.1 + techIndex * 0.05 
+                          }}
+                          whileHover={{ scale: 1.1 }}
+                        >
+                          <Badge variant="outline" className="text-xs">
+                            {tech}
+                          </Badge>
+                        </motion.div>
+                      ))}
+                    </div>
+                  
+                  <div className="flex gap-2">
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="flex-1"
+                      >
+                        <Button
+                          size="sm"
+                          className="w-full"
+                          onClick={() => window.open(project.liveUrl, '_blank')}
+                        >
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Live Demo
+                        </Button>
+                      </motion.div>
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="flex-1"
+                      >
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="w-full"
+                          onClick={() => window.open(project.githubUrl, '_blank')}
+                        >
+                          <Github className="w-4 h-4 mr-2" />
+                          Code
+                        </Button>
+                      </motion.div>
+                    </div>
+                 </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
+
+        <div className="flex justify-center mt-12 gap-4 flex-wrap">
+          <AnimatePresence mode="wait">
+            {hashMoreProjects && (
+              <motion.div
+                key="load-more"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4 }}
+              >
+                <Button
+                  onClick={loadMoreProjects}
+                  variant="outline"
+                  size="lg"
+                  className="group relative overflow-hidden hover:shadow-lg transition-all duration-300"
+                >
+                  <motion.div
+                    className="flex items-center gap-2"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <span>Load More Projects</span>
+                    <motion.div
+                      animate={{ y: [0, 3, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                      <ChevronDown className="w-4 h-4" />
+                    </motion.div>
+                  </motion.div>
+                  
+                  {/* Animated background effect */}
+                  <motion.div
+                    className="absolute inset-0 bg-primary/10 -z-10"
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileHover={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </Button>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          <AnimatePresence mode="wait">
+            {canShowLess && (
+              <motion.div
+                key="show-less"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4 }}
+              >
+                <Button
+                  onClick={showLessProjects}
+                  variant="outline"
+                  size="lg"
+                  className="group relative overflow-hidden hover:shadow-lg transition-all duration-300"
+                >
+                  <motion.div
+                    className="flex items-center gap-2"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <span>Show Less</span>
+                    <motion.div
+                      animate={{ y: [0, -3, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                      <ChevronUp className="w-4 h-4" />
+                    </motion.div>
+                  </motion.div>
+                  
+                  {/* Animated background effect */}
+                  <motion.div
+                    className="absolute inset-0 bg-secondary/10 -z-10"
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileHover={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </Button>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          <AnimatePresence mode="wait">
+            {visibleCount > INITIAL_COUNT && (
+              <motion.div
+                key="reset"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+              >
+                <Button
+                  onClick={resetToInitial}
+                  variant="ghost"
+                  size="lg"
+                  className="group relative overflow-hidden hover:shadow-lg transition-all duration-300"
+                >
+                  <motion.div
+                    className="flex items-center gap-2"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <span>Reset View</span>
+                    <motion.div
+                      whileHover={{ rotate: 180 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <RotateCcw className="w-4 h-4" />
+                    </motion.div>
+                  </motion.div>
+                  
+                  {/* Animated background effect */}
+                  <motion.div
+                    className="absolute inset-0 bg-accent/10 -z-10"
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileHover={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </Button>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
     </section>
   )
 }
 
 export default Projects
+
+
+
+
+
+
+
+
+
+
+
+
+
+
