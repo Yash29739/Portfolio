@@ -84,7 +84,7 @@ const Certifications = () => {
               }}
               whileHover={{ scale: 1.02, y: -5 }}
             >
-              <Card className="h-full hover:shadow-lg transition-all duration-300 border-1-primary">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 border-1-pri">
                 <CardHeader className="pb-4">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">

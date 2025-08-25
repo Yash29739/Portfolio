@@ -5,6 +5,9 @@ import { Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { Button } from '../ui/Button';
+import { Label } from '../ui/label';
+import { Input } from '../ui/input';
+import { Textarea } from '../ui/textarea';
 
 const Contact = () => {
   const [ref, isVisible] = useScrollReveal(0.1);
