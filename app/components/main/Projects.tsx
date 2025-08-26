@@ -14,77 +14,69 @@ const Projects = () => {
   
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce platform with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
+      title: "AI-resume-analyzer",
+      description: "Simple ai resume analyzer which uses react.js, putter.js, tailwindCSS",
       image: "/img.png",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
+      technologies: ["Next.js", "Putter.js", "TailwindCSS"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example/project1"
+      githubUrl: "https://github.com/Yash29739/AI-resume-analyzer"
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+      title: "AutiSecure",
+      description: "This app offers a seamless ASD screening process, starting with a survey-based prediction and an AI-driven facial recognition model for greater accuracy. Users can connect with medical professionals for further guidance. Beyond detection, it raises awareness and educates users on autism, promoting understanding and inclusivity.",
       image: "/img.png",
-      technologies: ["React", "TypeScript", "Socket.io", "MongoDB"],
+      technologies: ["Flutter", "Python", "MongoDB"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example/project2"
+      githubUrl: "https://github.com/Yash29739/AutiSecure"
     },
     {
-      title: "Analytics Dashboard",
-      description: "A comprehensive analytics dashboard with interactive charts, real-time data visualization, and customizable reporting features.",
+      title: "Search Automator",
+      description: "simlpe automatic searcher",
       image: "/img.png",
       technologies: ["Next.js", "D3.js", "Python", "FastAPI"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example/project3"
+      githubUrl: "https://github.com/Yash29739/Search_automator_for_Microsoft_Rewards"
     },
     {
-      title: "Social Media Platform",
-      description: "A modern social media application with real-time messaging, post sharing, and social networking features. Built with modern web technologies.",
+      title: "Virtual Keyboard",
+      description: "a simple virtual air keyboard which makes use of a ",
       image: "/img.png",
-      technologies: ["Vue.js", "Express", "Redis", "WebSocket"],
+      technologies: ["SciKit learn"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example/project4"
+      githubUrl: "https://github.com/Yash29739/Virtual_keyboard"
     },
     {
-      title: "AI-Powered Chat Bot",
-      description: "An intelligent chatbot application with natural language processing, context awareness, and integration with various APIs for enhanced user experience.",
+      title: "SafeHood",
+      description: "A neighborhood security and communication app for real-time alerts, emergency assistance, and community collaboration. Stay informed with group chats, SOS emergency buttons, service directories, and instant notifications to enhance safety and connectivity.",
       image: "/img.png",
-      technologies: ["Python", "OpenAI", "Flask", "TensorFlow"],
+      technologies: ["Flutter","FireBase"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example/project5"
+      githubUrl: "https://github.com/Yash29739/SafeHood"
     },
     {
-      title: "Cryptocurrency Tracker",
+      title: "Leave Application App",
       description: "A real-time cryptocurrency tracking application with portfolio management, price alerts, and detailed market analytics with beautiful charts.",
       image: "/img.png",
-      technologies: ["React", "Chart.js", "Web3", "Node.js"],
+      technologies: ["Flutter","FireBase"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example/project6"
+      githubUrl: "https://github.com/Yash29739/leave-application-app"
     },
     {
-      title: "Weather Forecast App",
+      title: "DarkShield",
       description: "A beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics for multiple cities worldwide.",
       image: "/img.png",
-      technologies: ["React Native", "OpenWeather API", "Redux", "Maps"],
+      technologies: ["Python","React.js","TailwindCSS"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example/project7"
+      githubUrl: "https://github.com/Yash29739/DarkSheild"
     },
     {
-      title: "Recipe Sharing Platform",
+      title: "Digital Detox",
       description: "A community-driven recipe sharing platform where users can discover, save, and share their favorite recipes with detailed nutritional information.",
       image: "/img.png",
-      technologies: ["Angular", "Firebase", "Ionic", "PWA"],
+      technologies: ["Next.js","TailwindCSS","Python"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example/project8"
+      githubUrl: "https://github.com/Yash29739/Digital-Detox"
     },
-    {
-      title: "Fitness Tracking Dashboard",
-      description: "A comprehensive fitness tracking application with workout plans, progress tracking, and social features for motivation and community building.",
-      image: "/img.png",
-      technologies: ["React", "GraphQL", "Apollo", "Prisma"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example/project9"
-    }
   ];
 
   const LOAD_INCRREMENT = 3;
