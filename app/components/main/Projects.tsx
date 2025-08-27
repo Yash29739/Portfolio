@@ -14,68 +14,76 @@ const Projects = () => {
   
   const projects = [
     {
-      title: "AI-resume-analyzer",
-      description: "Simple ai resume analyzer which uses react.js, putter.js, tailwindCSS",
-      image: "/img.png",
-      technologies: ["Next.js", "Putter.js", "TailwindCSS"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/Yash29739/AI-resume-analyzer"
-    },
-    {
       title: "AutiSecure",
-      description: "This app offers a seamless ASD screening process, starting with a survey-based prediction and an AI-driven facial recognition model for greater accuracy. Users can connect with medical professionals for further guidance. Beyond detection, it raises awareness and educates users on autism, promoting understanding and inclusivity.",
-      image: "/img.png",
+      description:
+        "AutiSecure is an autism spectrum disorder (ASD) screening and awareness app. It begins with a survey-based prediction and enhances accuracy using an AI-powered facial recognition model. The app allows users to connect with medical professionals for further guidance, while also raising awareness and promoting inclusivity through educational content.",
+      image: "/Autisecure.png",
       technologies: ["Flutter", "Python", "MongoDB"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/Yash29739/AutiSecure"
+      githubUrl: "https://github.com/Yash29739/AutiSecure",
     },
     {
-      title: "Search Automator",
-      description: "simlpe automatic searcher",
+      title: "AI Resume Analyzer",
+      description:
+        "An AI-powered resume analysis tool that provides instant, data-driven feedback on uploaded resumes. Built with Next.js, Puter.js, and TailwindCSS, it allows users to log in, upload resumes, and receive insights on strengths, weaknesses, and suggested improvements.",
       image: "/img.png",
-      technologies: ["Next.js", "D3.js", "Python", "FastAPI"],
+      technologies: ["Next.js", "Puter.js", "TailwindCSS"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/Yash29739/Search_automator_for_Microsoft_Rewards"
+      githubUrl: "https://github.com/Yash29739/AI-resume-analyzer",
     },
     {
       title: "Virtual Keyboard",
-      description: "a simple virtual air keyboard which makes use of a ",
+      description:
+        "An interactive virtual piano keyboard playable with hand gestures via a webcam. The project uses MediaPipe for hand tracking, OpenCV for real-time visualization, and Pygame for generating audio playback, making it a fun blend of AI, vision, and music.",
       image: "/img.png",
-      technologies: ["SciKit learn"],
+      technologies: ["MediaPipe", "OpenCV", "Pygame"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/Yash29739/Virtual_keyboard"
-    },
-    {
-      title: "SafeHood",
-      description: "A neighborhood security and communication app for real-time alerts, emergency assistance, and community collaboration. Stay informed with group chats, SOS emergency buttons, service directories, and instant notifications to enhance safety and connectivity.",
-      image: "/img.png",
-      technologies: ["Flutter","FireBase"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/Yash29739/SafeHood"
-    },
-    {
-      title: "Leave Application App",
-      description: "A real-time cryptocurrency tracking application with portfolio management, price alerts, and detailed market analytics with beautiful charts.",
-      image: "/img.png",
-      technologies: ["Flutter","FireBase"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/Yash29739/leave-application-app"
-    },
-    {
-      title: "DarkShield",
-      description: "A beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics for multiple cities worldwide.",
-      image: "/img.png",
-      technologies: ["Python","React.js","TailwindCSS"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/Yash29739/DarkSheild"
+      githubUrl: "https://github.com/Yash29739/Virtual_keyboard",
     },
     {
       title: "Digital Detox",
-      description: "A community-driven recipe sharing platform where users can discover, save, and share their favorite recipes with detailed nutritional information.",
+      description:
+        "A digital well-being platform that helps users monitor, track, and reduce screen time. It includes features such as surveys, suggestions powered by AI/ML, task management with to-do lists, screen time trackers, visual analytics, and a resource section with motivational content for healthier device usage.",
       image: "/img.png",
-      technologies: ["Next.js","TailwindCSS","Python"],
+      technologies: ["Next.js", "TailwindCSS", "Python"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/Yash29739/Digital-Detox"
+      githubUrl: "https://github.com/Yash29739/Digital-Detox",
+    },
+    {
+      title: "Search Automator",
+      description:
+        "A Python-based automation tool that uses Selenium to perform repetitive searches automatically. Initially designed for Microsoft Rewards, it helps in streamlining tasks that require multiple search queries without manual effort.",
+      image: "/img.png",
+      technologies: ["Selenium", "Python"],
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com/Yash29739/Search_automator_for_Microsoft_Rewards",
+    },
+    {
+      title: "SafeHood",
+      description:
+        "A neighborhood safety and community communication app that provides real-time alerts, group chats, emergency SOS features, service directories, and instant notifications. SafeHood strengthens local connectivity while ensuring improved safety within communities.",
+      image: "/img.png",
+      technologies: ["Flutter", "Firebase"],
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com/Yash29739/SafeHood",
+    },
+    {
+      title: "Leave Application App",
+      description:
+        "A mobile app for managing leave applications within organizations. It allows employees to submit leave requests digitally, track approval status in real time, and maintain a transparent communication channel between staff and administrators.",
+      image: "/img.png",
+      technologies: ["Flutter", "Firebase"],
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com/Yash29739/leave-application-app",
+    },
+    {
+      title: "DarkShield",
+      description:
+        "DarkShield is a fake price detector designed to identify deceptive pricing strategies (dark patterns) on e-commerce websites. It helps users detect inflated discounts, misleading offers, and price manipulations, ensuring more transparent and fair online shopping experiences.",
+      image: "/img.png",
+      technologies: ["Python", "React.js", "TailwindCSS"],
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com/Yash29739/DarkSheild",
     },
   ];
 
@@ -144,8 +152,8 @@ const Projects = () => {
                     transition={{duration: 0.3}}
                   >
                     <Image
-                      width={100}
-                      height={100}
+                      width={300}
+                      height={120}
                       src={project.image}
                       alt={project.title}
                       className='w-fulll h-full object-cover'
@@ -249,12 +257,12 @@ const Projects = () => {
                   </motion.div>
                   
                   {/* Animated background effect */}
-                  <motion.div
+                  {/* <motion.div
                     className="absolute inset-0 bg-primary/10 -z-10"
                     initial={{ scale: 0, opacity: 0 }}
                     whileHover={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.3 }}
-                  />
+                  /> */}
                 </Button>
               </motion.div>
             )}
@@ -289,13 +297,13 @@ const Projects = () => {
                     </motion.div>
                   </motion.div>
                   
-                  {/* Animated background effect */}
+                  {/* Animated background effect
                   <motion.div
                     className="absolute inset-0 bg-secondary/10 -z-10"
                     initial={{ scale: 0, opacity: 0 }}
                     whileHover={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.3 }}
-                  />
+                  /> */}
                 </Button>
               </motion.div>
             )}
@@ -331,12 +339,12 @@ const Projects = () => {
                   </motion.div>
                   
                   {/* Animated background effect */}
-                  <motion.div
+                  {/* <motion.div
                     className="absolute inset-0 bg-accent/10 -z-10"
                     initial={{ scale: 0, opacity: 0 }}
                     whileHover={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.3 }}
-                  />
+                  /> */}
                 </Button>
               </motion.div>
             )}
