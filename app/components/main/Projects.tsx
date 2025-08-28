@@ -26,7 +26,7 @@ const Projects = () => {
       title: "AI Resume Analyzer",
       description:
         "An AI-powered resume analysis tool that provides instant, data-driven feedback on uploaded resumes. Built with Next.js, Puter.js, and TailwindCSS, it allows users to log in, upload resumes, and receive insights on strengths, weaknesses, and suggested improvements.",
-      image: "/img.png",
+      image: "/AI_Resume.png",
       technologies: ["Next.js", "Puter.js", "TailwindCSS"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/Yash29739/AI-resume-analyzer",
@@ -35,7 +35,7 @@ const Projects = () => {
       title: "Virtual Keyboard",
       description:
         "An interactive virtual piano keyboard playable with hand gestures via a webcam. The project uses MediaPipe for hand tracking, OpenCV for real-time visualization, and Pygame for generating audio playback, making it a fun blend of AI, vision, and music.",
-      image: "/img.png",
+      image: "/Virtual_keyboard.png",
       technologies: ["MediaPipe", "OpenCV", "Pygame"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/Yash29739/Virtual_keyboard",
@@ -44,7 +44,7 @@ const Projects = () => {
       title: "Digital Detox",
       description:
         "A digital well-being platform that helps users monitor, track, and reduce screen time. It includes features such as surveys, suggestions powered by AI/ML, task management with to-do lists, screen time trackers, visual analytics, and a resource section with motivational content for healthier device usage.",
-      image: "/img.png",
+      image: "/Digital_Detox.png",
       technologies: ["Next.js", "TailwindCSS", "Python"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/Yash29739/Digital-Detox",
@@ -53,7 +53,7 @@ const Projects = () => {
       title: "Search Automator",
       description:
         "A Python-based automation tool that uses Selenium to perform repetitive searches automatically. Initially designed for Microsoft Rewards, it helps in streamlining tasks that require multiple search queries without manual effort.",
-      image: "/img.png",
+      image: "/Search_Automator.png",
       technologies: ["Selenium", "Python"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/Yash29739/Search_automator_for_Microsoft_Rewards",
@@ -62,7 +62,7 @@ const Projects = () => {
       title: "SafeHood",
       description:
         "A neighborhood safety and community communication app that provides real-time alerts, group chats, emergency SOS features, service directories, and instant notifications. SafeHood strengthens local connectivity while ensuring improved safety within communities.",
-      image: "/img.png",
+      image: "/SafeHood.png",
       technologies: ["Flutter", "Firebase"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/Yash29739/SafeHood",
@@ -71,7 +71,7 @@ const Projects = () => {
       title: "Leave Application App",
       description:
         "A mobile app for managing leave applications within organizations. It allows employees to submit leave requests digitally, track approval status in real time, and maintain a transparent communication channel between staff and administrators.",
-      image: "/img.png",
+      image: "/Leave_Application.png",
       technologies: ["Flutter", "Firebase"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/Yash29739/leave-application-app",
@@ -80,7 +80,7 @@ const Projects = () => {
       title: "DarkShield",
       description:
         "DarkShield is a fake price detector designed to identify deceptive pricing strategies (dark patterns) on e-commerce websites. It helps users detect inflated discounts, misleading offers, and price manipulations, ensuring more transparent and fair online shopping experiences.",
-      image: "/img.png",
+      image: "/Dark_Shield.png",
       technologies: ["Python", "React.js", "TailwindCSS"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/Yash29739/DarkSheild",
