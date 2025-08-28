@@ -117,7 +117,7 @@ const Projects = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className='text-3xl md:text-4xl mb-4'>Featured Projects</h2>
-          <p className='text-lg text-muted-foreground max-w-2xl mx-auto'>Here are some of the projects I've worked on recently. Each one represents a unique challenge and learning opportunity.</p>
+          <p className='text-lg text-muted-foreground max-w-2xl mx-auto'>Here are some of the projects I&apos;ve worked on recently. Each one represents a unique challenge and learning opportunity.</p>
           <motion.div
             className='mt-6 text-sm text-muted-foreground'
             initial={{ opacity: 0 }}

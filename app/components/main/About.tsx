@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { useScrollReveal } from '../hooks/useScrollReveal'
-import { MotionConfig, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Button } from '../ui/Button';
 import Image from 'next/image';
 import { TypingAnimation } from '../TypeAnimation';
@@ -87,7 +87,7 @@ const About = () => {
                   ease: "easeOut",
                 }}
               >
-                I'm a dedicated frontend web developer
+                I&apos;m a dedicated frontend web developer
                 specializing in Next.js, React.js, Tailwind CSS,
                 HTML, CSS, and JavaScript. I build dynamic,
                 user-friendly web applicatio
