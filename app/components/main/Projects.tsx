@@ -152,11 +152,11 @@ const Projects = () => {
                     transition={{duration: 0.3}}
                   >
                     <Image
-                      width={300}
-                      height={120}
+                      width={600}
+                      height={220}
                       src={project.image}
                       alt={project.title}
-                      className='w-fulll h-full object-cover'
+                      className='"w-full md:w-88 lg:w-[500px] h-full object-cover'
                     />
                   </motion.div>
                   </div>
