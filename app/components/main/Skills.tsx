@@ -8,7 +8,7 @@ import { FaPython } from 'react-icons/fa6';
 
 const Skills = () => {
   
-  const [ref,isVisible]=useScrollReveal(0.1);
+  const [ref,isVisible]=useScrollReveal(0.1,'-100px');
   const skills = [
     { name: "React", icon: <FaReact className="text-sky-500" /> },
     { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
@@ -85,8 +85,8 @@ const Skills = () => {
                   whileHover={{scale:1.1, y: -5}}
                   transition={{type:"spring", stiffness:300}}
                 >
-                  <span className='text-2xl'>{skill.icon}</span>
-                  <span className='text-sm'>{skill.name}</span>
+                  <span className='text-2xl' >{skill.icon}</span>
+                  <span className='text-sm' style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.5)" }}>{skill.name}</span>
                 </motion.div>
               ))}
             </motion.div>

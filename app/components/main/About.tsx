@@ -35,12 +35,12 @@ const About = () => {
     
     // to Download the resume directly
     const resumeUrl = '/B_M_Yashwanth_resume.pdf'; 
-    const link = document.createElement('a');
-    link.href = resumeUrl;
-    link.download = 'B_M_Yashwanth_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+        const link = document.createElement('a');
+        link.href = resumeUrl;
+        link.download = 'B_M_Yashwanth_Resume.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
 };
 
   return (
@@ -107,7 +107,7 @@ const About = () => {
                 </motion.div>
                 
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} >
-                  <Button onClick={() => downloadResume} size="lg" variant="outline">
+                  <Button onClick={downloadResume} size="lg" variant="outline">
                     Download Resume
                   </Button>
                 </motion.div>
