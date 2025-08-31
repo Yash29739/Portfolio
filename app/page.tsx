@@ -11,8 +11,8 @@ import { Snowflakes } from "./components/SnowFlakes";
 
 export default function Home() {
   return (
-    <ThemeProvider defaultTheme="light">
-    <div className="min-h-screen bg-background animate-theme-transition">
+    
+    <div className="min-h-screen bg-background animate-theme-transition relative">
       <Snowflakes/>
       <div className="relative z-10">
       <Header/>
@@ -26,6 +26,5 @@ export default function Home() {
       <Footer/>
       </div>
     </div>
-    </ThemeProvider>
   );
 }

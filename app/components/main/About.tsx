@@ -23,7 +23,7 @@ const About = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -44,7 +44,7 @@ const About = () => {
 };
 
   return (
-    <section className='py-20 md:py-32' ref={ref}>
+    <section id="about" className='py-20 md:py-32' ref={ref}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -57,11 +57,12 @@ const About = () => {
             }
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
+            <div className="space-y-4" >
             <motion.h1 
               className="text-4xl md:text-5xl lg:text-6xl tracking-tight "
-              initial={{ opacity: 0, y: 50 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.8,delay: 0.2, ease: "easeOut" }}
             >
               Hi, I am <span className='text-primary bg-gradient-to-r from-primary font-semibold to-primary/70 bg-clip-text'>B M Yashwanth</span>
             </motion.h1>
@@ -73,6 +74,7 @@ const About = () => {
                 >
                   Full Stack Developer & UI/UX Designer
             </motion.h2>
+            </div>
             <motion.p
                 className="text-lg text-muted-foreground max-w-2xl"
                 initial={{ opacity: 0, y: 20 }}

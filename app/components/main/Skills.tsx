@@ -110,7 +110,7 @@ const Skills = () => {
               className="text-center p-6 rounded-lg bg-card border"
               initial={{ opacity: 0, y: 30 }}
               animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+              transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
               whileHover={{ scale: 1.05, y: -5 }}
             >
               <div className="text-4xl mb-4">{category.icon}</div>
