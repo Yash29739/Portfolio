@@ -32,8 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#0ea5e9" /> */}
+        <link rel="icon" href="/logo.png" />
       </head>
       <body className={inter.className}>
       <ThemeProvider defaultTheme="light">

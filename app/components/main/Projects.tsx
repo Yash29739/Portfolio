@@ -195,20 +195,6 @@ const Projects = () => {
                         className="flex-1"
                       >
                         <Button
-                          size="sm"
-                          className="w-full"
-                          onClick={() => window.open(project.liveUrl, '_blank')}
-                        >
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          Live Demo
-                        </Button>
-                      </motion.div>
-                      <motion.div
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex-1"
-                      >
-                        <Button
                           variant="outline"
                           size="sm"
                           className="w-full"

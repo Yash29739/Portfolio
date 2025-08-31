@@ -47,6 +47,93 @@ const About = () => {
     <section id="about" className='py-20 md:py-32' ref={ref}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <motion.div
+            className="flex justify-center lg:justify-start"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={
+              isVisible
+                ? { opacity: 1, scale: 1 }
+                : { opacity: 0, scale: 0.8 }
+            }
+            transition={{
+              duration: 1,
+              delay: 0.3,
+              ease: "easeOut",
+            }}
+          >
+            <div className="relative">
+              <motion.div
+                className="w-80 h-80 rounded-full overflow-hidden border-4 border-border"
+                animate={{
+                  y: [0, -10, 0],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <Image
+                width={380}
+                height={380}
+                  src="/photo.png"
+                  alt="B M Yashwanth"
+                  className="w-full object-cover"
+                />
+              </motion.div>
+
+              {/* Typing Animation Box */}
+              <motion.div
+                className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-card border rounded-lg px-4 py-2 shadow-lg min-w-[200px] text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={
+                  isVisible
+                    ? { opacity: 1, y: 0 }
+                    : { opacity: 0, y: 20 }
+                }
+                transition={{
+                  duration: 0.8,
+                  delay: 1.2,
+                  ease: "easeOut",
+                }}
+              >
+                <TypingAnimation
+                  phrases={typingPhrases}
+                  className="text-sm"
+                />
+              </motion.div>
+
+              {/* Floating decoration */}
+              <motion.div
+                className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full"
+                animate={{
+                  scale: [1, 1.2, 1],
+                  rotate: [0, 180, 360],
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
+
+              <motion.div
+                className="absolute -bottom-4 -left-4 w-6 h-6 bg-accent rounded-full"
+                animate={{
+                  scale: [1, 1.3, 1],
+                  rotate: [360, 180, 0],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1,
+                }}
+              />
+            </div>
+          </motion.div>
+
           <motion.div
             className="space-y-6"
             initial={{ opacity: 0, y: 50 }}
@@ -120,93 +207,7 @@ const About = () => {
               </motion.div>
             </motion.div>
 
-            <motion.div
-            className="flex justify-center lg:justify-end"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={
-              isVisible
-                ? { opacity: 1, scale: 1 }
-                : { opacity: 0, scale: 0.8 }
-            }
-            transition={{
-              duration: 1,
-              delay: 0.3,
-              ease: "easeOut",
-            }}
-          >
-            <div className="relative">
-              <motion.div
-                className="w-80 h-80 rounded-full overflow-hidden border-4 border-border"
-                animate={{
-                  y: [0, -10, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <Image
-                width={380}
-                height={380}
-                  src="/photo.png"
-                  alt="John Doe"
-                  className="w-full object-cover"
-                />
-              </motion.div>
-
-              {/* Typing Animation Box */}
-              <motion.div
-                className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-card border rounded-lg px-4 py-2 shadow-lg min-w-[200px] text-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={
-                  isVisible
-                    ? { opacity: 1, y: 0 }
-                    : { opacity: 0, y: 20 }
-                }
-                transition={{
-                  duration: 0.8,
-                  delay: 1.2,
-                  ease: "easeOut",
-                }}
-              >
-                <TypingAnimation
-                  phrases={typingPhrases}
-                  className="text-sm"
-                />
-              </motion.div>
-
-              {/* Floating decoration */}
-              <motion.div
-                className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full"
-                animate={{
-                  scale: [1, 1.2, 1],
-                  rotate: [0, 180, 360],
-                }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-
-              <motion.div
-                className="absolute -bottom-4 -left-4 w-6 h-6 bg-accent rounded-full"
-                animate={{
-                  scale: [1, 1.3, 1],
-                  rotate: [360, 180, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1,
-                }}
-              />
-            </div>
-          </motion.div>
-
+           
         </div>
       </div>
     </section>

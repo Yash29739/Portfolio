@@ -11,44 +11,40 @@ const Certifications = () => {
   const [ref, isVisible] = useScrollReveal(0.1);
   const certifications = [
     {
-      title: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      date: "2024",
-      description:
-        "Validates technical expertise in designing distributed systems on AWS",
-      credentialId: "AWS-SA-2024-001",
-      verifyUrl: "https://aws.amazon.com/verification",
-      skills: ["AWS", "Cloud Architecture", "Security", "Scalability"],
-    },
-    {
-      title: "Meta Front-End Developer Professional Certificate",
-      issuer: "Meta via Coursera",
+      title: "Dark Patterns Buster Hackathon 2023",
+      issuer: "Department of Consumer Affairs and IIT Banaras Hindu University",
       date: "2023",
-      description:
-        "Comprehensive program covering React, JavaScript, and modern web development",
-      credentialId: "META-FE-2023-045",
-      verifyUrl: "https://coursera.org/verify",
-      skills: ["React", "JavaScript", "HTML/CSS", "UI/UX"],
+      description: "Received a Certificate of Appreciation for willful efforts and interest in the intra-college round of the Dark Patterns Buster Hackathon (DPBH-2023)",
+      credentialId: "DPBH-2023/R2/2240",
+      viewUrl: "https://drive.google.com/file/d/1u21Je3BYTrhOpcnW_Z24GhIEgU7a6NLk/view?usp=drive_link",
+      skills: ["Hackathon", "Consumer Affairs", "UI/UX", "Ethics in Technology"],
     },
     {
-      title: "Google UX Design Professional Certificate",
-      issuer: "Google via Coursera",
+      title: "AI Text Summarizer app",
+      issuer: "Postman Student Programs",
       date: "2023",
-      description:
-        "User experience design fundamentals, prototyping, and usability testing",
-      credentialId: "GOOGLE-UX-2023-128",
-      verifyUrl: "https://coursera.org/verify",
-      skills: ["Figma", "User Research", "Prototyping", "Design Systems"],
+      description: "Completed a project-based learning module on building an AI Text Summarizer app.",
+      credentialId: "Not available",
+      viewUrl: "https://drive.google.com/file/d/1C6GSnf9KPX092uucyutAMzZQ1SUMKRf4/view?usp=sharing",
+      skills: ["AI", "API Development", "Postman", "Node.js"],
     },
     {
-      title: "MongoDB Developer Certification",
-      issuer: "MongoDB University",
-      date: "2022",
-      description:
-        "Database design, aggregation framework, and performance optimization",
-      credentialId: "MONGO-DEV-2022-892",
-      verifyUrl: "https://university.mongodb.com/verify",
-      skills: ["MongoDB", "NoSQL", "Database Design", "Performance"],
+      title: "Artificial Intelligence Fundamentals",
+      issuer: "IBM SkillsBuild",
+      date: "2023",
+      description: "Completed a course covering the fundamentals of artificial intelligence, including machine learning and deep learning concepts.",
+      credentialId: "Not available",
+      viewUrl: "https://drive.google.com/drive/folders/1aWkQPB3j0EAj9lWsXXsnZpUNj3CElwuD?usp=sharing",
+      skills: ["Artificial Intelligence", "Machine Learning", "Data Science"],
+    },
+    {
+      title: "Frontend Web Development with React.JS & JavaScript",
+      issuer: "DevTown",
+      date: "2023",
+      description: "Successfully completed a 7-day bootcamp on frontend web development.",
+      credentialId: "Not available",
+      viewUrl: "https://drive.google.com/drive/folders/1L27tKkCpyQ2oJinEXwEE1Mv8FFaIFSbb?usp=sharing",
+      skills: ["React.js", "JavaScript", "HTML/CSS", "Frontend Development"],
     },
   ];
 
@@ -131,18 +127,23 @@ const Certifications = () => {
                       }
                     </div>
 
+
                     <div className="pt-2 border-t">
+                    
                       <div className="flex items-center justify-between">
-                        <span className="text-xs text-muted-foreground">ID: {cert.credentialId}</span> 
+                        <span className="text-xs text-muted-foreground">
+                          ID: {cert.credentialId}
+                        </span>
                         <motion.div
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                         >
+                          
                           <Button
                             variant="ghost"
                             size="sm"
                             className="text-xs h-8"
-                            onClick={() => window.open(cert.verifyUrl, '_blank')}
+                            onClick={() => window.open(cert.viewUrl, '_blank')}
                           >
                             <ExternalLink className="w-3 h-3 mr-1" />
                             View
